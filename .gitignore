@@ -1,0 +1,4 @@
+$ cat .gitignore
+/Lib_Utils/*
+!/Lib_Utils/Assets
+!/Lib_Utils/ProjectSettings
