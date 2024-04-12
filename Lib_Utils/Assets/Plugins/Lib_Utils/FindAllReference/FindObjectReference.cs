@@ -8,6 +8,7 @@ using System.Linq;
 /// </summary>
 public class FindObjectReference
 {
+    // 资源列表右键菜单 -> FindAllReference，输出在 Console
     [MenuItem("Assets/FindAllReference", priority = 12)]
     public static void FindObjectAllReference()
     {
@@ -33,7 +34,8 @@ public class FindObjectReference
             int start = 0;
             int max = allPath.Length;
             int count = 0;
-            string refs = $"==== {Selection.activeObject.name} 的引用 ====\n";
+            string prefix = $"==== {Selection.activeObject.name} 的引用，";
+            string refs = "";
             EditorApplication.update = () => {
                 string content = File.ReadAllText(allPath[start]);
                 if (System.Text.RegularExpressions.Regex.IsMatch(content, selectUid[0]))
@@ -51,7 +53,7 @@ public class FindObjectReference
                     //EditorMessage.MessageBox(IntPtr.Zero, "打印完成", "确认", 0);
                     EditorUtility.ClearProgressBar();
                     EditorApplication.update = null;
-                    UnityEngine.Debug.Log(refs + $"引用计数：{count}");
+                    UnityEngine.Debug.Log(prefix + $"计数：{count} ====\n" + refs);
                 }
             };
         }

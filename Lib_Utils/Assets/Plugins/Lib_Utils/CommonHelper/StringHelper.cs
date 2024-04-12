@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using UnityEngine;
 
-public static class CommonHelper
+public static partial class CommonHelper
 {
     /// <summary>
     /// 将中文的unicode转成能识别的GBK编码
