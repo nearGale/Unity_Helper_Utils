@@ -1,4 +1,4 @@
 $ cat .gitignore
-/Lib_Utils/*
-!/Lib_Utils/Assets
-!/Lib_Utils/ProjectSettings
+/Unity_Helper_Utils/*
+!/Unity_Helper_Utils/Assets
+!/Unity_Helper_Utils/ProjectSettings
