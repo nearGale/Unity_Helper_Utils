@@ -140,7 +140,7 @@ namespace ExcelDataReader.Editor
             classSource.Append("[CreateAssetMenu(fileName = \"" + dataClassName +
                                "\", menuName = \"Excel To ScriptableObject/Create " + dataClassName +
                                "\", order = 1)]\n");
-            classSource.Append("public class " + dataClassName + " : ExcelDataBase<" + itemClassName + ">\n");
+            classSource.Append("public partial class " + dataClassName + " : ExcelDataBase<" + itemClassName + ">\n");
             classSource.Append("{\n");
 
             // 声明字段，行数据类数组
