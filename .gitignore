@@ -3,3 +3,4 @@ $ cat .gitignore
 !/Unity_Helper_Utils/Assets
 !/Unity_Helper_Utils/ProjectSettings
 !/Unity_Helper_Utils/Packages
+/Unity_Helper_Utils/Assets/StreamingAssets
